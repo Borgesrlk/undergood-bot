@@ -1,9 +1,5 @@
-
-
-// ── Keep-alive HTTP server (necessario para Render.com) ─────────────────────
+// ── Keep-alive HTTP server (Render.com requer porta aberta) ─────────────────
 const http = require('http');
 const PORT = process.env.PORT || 3000;
-http.createServer((req, res) => {
-    res.writeHead(200);
-    res.end('Undergood Bot Online');
-}).listen(PORT, () => console.log('[HTTP] Keep-alive server na porta ' + PORT));
+http.createServer((req, res) => { res.writeHead(200); res.end('OK'); }).listen(PORT);
+// ─────────────────────────────────────────────────────────────────────────────
